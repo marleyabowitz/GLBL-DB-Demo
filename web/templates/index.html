@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Data</title>
+</head>
+<body>
+<h1>Water Data</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>pH</th>
+        <th>Hardness</th>
+        <th>Solids</th>
+        <th>Chloramines</th>
+        <th>Sulfate</th>
+        <th>Conductivity</th>
+        <th>Organic Carbon</th>
+        <th>Trihalomethanes</th>
+        <th>Turbidity</th>
+        <th>Potability</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for row in data %}
+    <tr>
+        <td>{{ row['id'] }}</td>
+        <td>{{ row['ph'] }}</td>
+        <td>{{ row['Hardness'] }}</td>
+        <td>{{ row['Solids'] }}</td>
+        <td>{{ row['Chloramines'] }}</td>
+        <td>{{ row['Sulfate'] }}</td>
+        <td>{{ row['Conductivity'] }}</td>
+        <td>{{ row['Organic_carbon'] }}</td>
+        <td>{{ row['Trihalomethanes'] }}</td>
+        <td>{{ row['Turbidity'] }}</td>
+        <td>{{ row['Potability'] }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
